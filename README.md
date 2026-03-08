@@ -1,75 +1,111 @@
-Wallet Guard
-AI-Powered Shared Wallet & Smart Expense Security System
+💳 Wallet Guard
+Smart Expense Tracking & AI-Powered Shared Wallet System
+“Secure your spending. Manage money smarter.”
 
-Project Overview
-Wallet Guard is an intelligent financial management platform designed to help users track expenses, detect fraudulent transactions, and manage shared wallets efficiently.
+Wallet Guard is a modern AI-powered financial management platform designed to help users track expenses, detect suspicious transactions, and manage shared wallets efficiently.
 
-Most payment applications only record spending after transactions occur, which often leads to overspending and poor financial planning. Wallet Guard introduces a proactive financial management approach using artificial intelligence to analyze spending patterns, provide alerts, and offer smart financial insights.
+The system combines receipt scanning, intelligent expense categorization, fraud detection, and an AI financial advisor chatbot to provide users with proactive financial insights and better spending control.
 
-The system integrates receipt scanning, fraud detection, AI-driven financial advice, and collaborative wallet management into a single platform.
+Built using a scalable full-stack architecture with React, Node.js, and MongoDB, Wallet Guard focuses on practical financial management and real-world application design.
 
-Key Features
-Smart Receipt Scan and Auto Classification
-Users can upload or scan receipts directly in the system.
+🎯 Project Objective
+The main goal of Wallet Guard is to create a smart financial management platform that helps users:
 
-The platform uses OCR technology to extract transaction details such as merchant name, date, and transaction amount. AI models then automatically categorize the expense into categories like food, transport, shopping, and bills.
+Track daily expenses easily
 
-Example
+Detect suspicious or fraudulent transactions
+
+Manage shared group wallets for trips or roommates
+
+Receive AI-based financial insights and recommendations
+
+The project also demonstrates key full-stack development concepts, including RESTful APIs, database integration, AI services, and real-time data processing.
+
+✨ Key Features
+📷 Smart Receipt Scan & Auto Classification
+Users can upload or scan a receipt directly in the application.
+
+The system uses OCR technology to extract transaction information and automatically categorize expenses using AI models.
+
+Example:
 Restaurant Bill → ₹850 → Category: Food
 
-Fraud Detection Alerts
-Wallet Guard continuously monitors transactions and analyzes patterns to identify suspicious activity.
+Benefits:
 
-The system detects unusual behavior based on:
+Eliminates manual expense entry
 
-Large transaction amounts
+Improves accuracy in expense tracking
+
+⚠ Fraud Detection Alerts
+Wallet Guard continuously monitors transaction patterns to detect unusual activities.
+
+The system analyzes:
+
+Unusually high transaction amounts
 
 Transactions from unexpected locations
 
-Unusual transaction timing
+Transactions at unusual times
 
-If suspicious activity is detected, the system sends an immediate alert to the user.
+If suspicious activity is detected, the system immediately alerts the user.
 
-Example Alert
+Example Alert:
+
 Suspicious Transaction Detected
 Location: Different City
 Amount: ₹25,000
 
-AI Financial Advisor Chatbot
-Wallet Guard includes an AI-powered chatbot that analyzes spending history and wallet balances to provide personalized financial advice.
+🤖 AI Financial Advisor Chatbot
+Wallet Guard includes an intelligent chatbot that provides financial insights based on user spending behavior.
 
 Users can ask questions such as:
 
-Can I afford this purchase?
+“Can I afford this purchase?”
 
-Am I overspending this month?
+“Am I overspending this month?”
 
-How can I reduce my expenses?
+“How can I improve my savings?”
 
-The chatbot provides insights and recommendations based on the user’s financial activity.
+The AI analyzes:
 
-Shared Wallet System
-Users can create shared wallets for group activities such as trips, roommates, or family expenses.
+Wallet balance
+
+Spending history
+
+Expense categories
+
+Then provides smart recommendations and financial guidance.
+
+👥 Shared Wallet System
+Users can create shared wallets for collaborative expenses such as:
+
+Trips
+
+Roommates
+
+Family budgets
+
+Group events
 
 Members can:
 
 Contribute funds
 
-Track shared spending
+Track shared expenses
 
-View member contributions
+View individual contributions
 
-Monitor individual balances
+Monitor balances and settlements
 
-This feature helps simplify collaborative expense management.
+This feature simplifies group financial management.
 
-Technology Stack
+🧰 Technology Stack
 Frontend
-React
-
-Tailwind CSS / CSS
+React.js
 
 Axios
+
+Tailwind CSS / CSS
 
 Chart.js / Recharts
 
@@ -87,87 +123,110 @@ JWT Authentication
 Artificial Intelligence
 Gemini API / OpenAI API
 
+AI expense classification
+
+AI financial advisor chatbot
+
 OCR Processing
-Tesseract OCR
+Tesseract OCR for receipt scanning
 
-Additional Tools
-Multer (file upload)
+Development Tools
+Git & GitHub
 
-REST API architecture
+Postman for API testing
 
-System Architecture
-wallet-guard
+VS Code
+
+📁 Project Structure
+wallet-guard/
 │
-├── wallet-guard-frontend
-│   ├── components
-│   ├── pages
-│   ├── services
+├── wallet-guard-frontend/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
 │   └── App.js
 │
-├── wallet-guard-backend
-│   ├── models
-│   ├── controllers
-│   ├── routes
-│   ├── middleware
+├── wallet-guard-backend/
+│   ├── models/
+│   ├── controllers/
+│   ├── routes/
+│   ├── middleware/
 │   └── server.js
-Main Application Modules
-Authentication
-User registration and login with secure authentication.
+│
+└── README.md
+🔑 API Configuration
+This project uses AI APIs for intelligent financial analysis.
 
-Dashboard
-Displays:
+Add the required API keys in your backend configuration file:
 
-Total wallet balance
+OPENAI_API_KEY=YOUR_API_KEY
+GEMINI_API_KEY=YOUR_API_KEY
+⚠️ Important:
+Never expose API keys in public repositories. Use environment variables or .env files and exclude them using .gitignore.
 
-Total spending
+⚙ Installation & Setup
+🔹 Backend Setup
+Navigate to backend folder:
 
-Wallet overview
+cd wallet-guard-backend
+Install dependencies:
 
-Spending charts
+npm install
+Start the backend server:
 
-Shared Wallet Management
-Allows users to:
+node server.js
+📍 Backend runs on:
 
-Create shared wallets
+http://localhost:5000
+🔹 Frontend Setup
+Navigate to frontend folder:
 
-Invite members
+cd wallet-guard-frontend
+Install dependencies:
 
-Track group expenses
+npm install
+Run the React application:
 
-Monitor member balances
+npm start
+📍 Frontend runs on:
 
-Expense Management
-Users can:
+http://localhost:3000
+🔗 Sample API Endpoints
+Method	Endpoint	Description
+POST	/api/auth/register	Register new user
+POST	/api/auth/login	User login
+POST	/api/wallet/create	Create shared wallet
+GET	/api/wallets	Get all wallets
+POST	/api/expense	Add new expense
+GET	/api/transactions	Fetch transaction history
+🧪 Testing
+Backend APIs tested using:
 
-Add expenses manually
+Postman
 
-Upload receipts for automatic expense extraction
+Frontend tested using:
 
-Fraud Detection
-Analyzes transaction behavior and generates alerts for suspicious activity.
+Browser developer tools
 
-AI Insights
-Provides financial recommendations and spending analysis through the AI chatbot.
+Console debugging
 
-Security Features
-JWT-based authentication
+Component testing
 
-Secure API communication
+🚀 Future Enhancements
+Potential improvements for the platform include:
 
-Fraud detection alerts
-
-Access control for shared wallets
-
-Future Enhancements
 Mobile application version
 
-Bank account integration
+Bank account and payment integration
 
 Advanced machine learning fraud detection
 
-Personalized budgeting recommendations
+Personalized budgeting tools
 
-Real-time financial alerts
+Real-time spending alerts
 
-Project Goal
-The goal of Wallet Guard is to transform traditional expense tracking into an intelligent financial management system that helps users control spending, detect fraud early, and manage shared finances effectively using AI-driven insights.
+📄 License
+This project is developed for educational and demonstration purposes.
+
+✨ Wallet Guard
+Smarter spending. Safer wallets. Better financial decisions.
